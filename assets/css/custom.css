@@ -1,0 +1,420 @@
+/* 
+=======================================|
+=======================================|
+==========INDEX PAGE STYLING===========|
+=======================================|
+=======================================|
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+/* loader styling begins here */
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    z-index: 9999;
+  }
+  /* ===============================================
+  ===============Key Frames starts here============= */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes zoomEffect {
+    0% {
+        scale:(1); /* Initial scale (normal size) */
+    }
+    50% {
+        scale:(1.1); /* Zoom in at 50% of the animation */
+    }
+    100% {
+        scale:(1);
+    }
+}
+
+  /* ===============================================
+  ===============Key Frames ends here============= */
+
+
+/* loader styling begins here */
+
+/*======= Scroll bar =======*/
+::-webkit-scrollbar{
+    background: #fff;
+    width: 11px;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #008081;
+    width: 100%;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #004050;
+
+}
+/*======= Scroll indicator bar =======*/
+.scroll-indicator-container{
+    width: 100%;
+    height: 5px;
+    position: fixed;
+    z-index: 999;
+}
+
+.scroll-indicator-bar{
+    background: #004040;
+    width: 0%;
+    height: 100%;
+    box-shadow: 0 0px 1px #ffffff,
+                0 0px 1px #ffffff;
+}
+
+/* #004040 */
+/* #008081 */
+
+/*======= Header navigation bar =======*/
+
+.navigation {
+    position: fixed;
+    display: flex;
+    background-color: white;
+    color:white;
+    height: 8vh;
+    text-align: center;
+    align-content: center;
+    justify-items: end;
+    z-index: 999;
+}
+.navigation-items li{
+    position: relative;
+    list-style: none;
+    margin-top: 2vh;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color:white;
+
+}
+.navigation ul li a{
+    max-width: 100%;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #004040;
+}
+.navigation ul li a:hover{
+    color: white !important;
+    background-color: #008081;
+    transition: all 100ms ease;
+} 
+
+.navigation ul li a:active{
+    font-weight: 800;
+    color: black;
+    border-bottom:3px solid #008081;
+    transition: all 100ms ease;
+}
+.navigation ul li a:visited{
+    font-weight: 800;
+    color: black;
+    border-bottom:3px solid #008081;
+    transition: all 100ms ease;
+}
+.dropdown-menu{
+    background-color: #ebebeb;
+    border-radius: 0 !important;
+    border: none !important;
+    float: inline-start;
+}
+.navbar-collapse{
+    display: block;
+    background-color: #ffffff;
+    margin: -10px 10px;
+    z-index: 999;
+}
+.navbar-toggler{
+    cursor: pointer;
+    border: none;
+}
+
+/*======= Header navigation bar  ends here=======*/
+
+/*======= body styling starts here===============*/
+/* Banner section styling */
+#banner img{
+    max-width: 100% !important;
+    display: inline-block;
+}
+
+#startbtn-div{
+    text-align: center;
+}
+
+#start-btn{
+    position: center;
+    padding: 10px 15px;
+    border-radius: 22px;
+    background-color: #004040;
+    color: white;
+    transform: translateY(-20px);
+    border: 1px solid #004040;
+    max-width: 50%;
+    z-index: -999;
+}
+
+/* Banner section styling */
+/* Services section */
+#services{
+    margin-top: 10px;
+    background-color: #F2F5F9;
+}
+#main-heading{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+#container{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.services-container{
+    background-color: #008081;
+    /* transform: translateY(20%); */
+    box-shadow: 5px 2px 20px 2px rgb(224, 224, 224);
+    text-align: center;
+    margin:10px auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    border-radius: 30px 0px 20px 0px;
+}
+.services-container:hover{
+    background-color: #004040;
+    transition: all 100ms ease-in;
+}
+.services-link{
+    text-decoration: none !important;
+}
+.services-img img{
+    width: 100%;
+    border-radius: 30px 0px 0px 0px;
+    position: relative;
+}
+.services-container p{
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: -5px !important;
+}
+.services-container i{
+    font-size: 14px;
+    margin-top: 400px;
+    color: #e2e2e2;
+    font-style: normal;
+    padding: 12px;
+}
+/* Portfolio styling */
+#portfolio{
+    margin: 40px auto;
+    display: inline;
+    width: 75%;
+    max-width: 1000px;
+    min-width: 500px;
+}
+#portfolio-container{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+.portifolio-image{
+    width: 25% !important;
+    margin: 2px;
+    border-radius: 20px 0px 20px 0px;
+}
+.portifolio-image:hover{
+    border-radius: 0px 50% 0px 50%;
+    transition: all 100ms ease-in-out;
+}
+#footer{
+    position: bottom;
+    background-color: #F2F5F9;
+    color: #004040;
+}
+.footer-inner{
+    margin: auto;
+    padding: 2px 10px;
+    width: 75%;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: justify;
+}
+.footer-title{
+    display: inline-flex;
+}
+.footer-about-title{
+    padding-top: 45px;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+.footer-about-par{
+    font-size: 14px;
+    line-height: 18px;
+    word-spacing: 2px;
+}
+.social-media{
+    margin: auto;
+    padding: 1px 10px;
+    width: 75%;
+    max-width: 600px;
+    min-width: 300px;
+    display: flexbox;
+}
+.social-media img{
+    width: 10%;
+    margin-right:10px ;
+    border-radius: 50%;
+    background-color:#F2F5F9;
+    border: 2px solid #004040;
+    box-shadow: 2px 2px 5px grey;
+}
+.footer-socials-title{
+    padding-top: 0px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.contact-quicklinks{
+    margin: auto;
+    padding: 20px 10px;
+    width: 75%;
+    max-width: 600px;
+    min-width: 300px;
+    display: flex;
+}
+.contact-quicklinks h5{
+    font-size: 16px;
+    margin-right: 120px;
+    display: inline;
+}
+.quicklinks a{
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+}
+.contact p{
+    margin-bottom: -2px;
+    display: block;
+    font-size: 14px;
+}
+.footer-bottom{
+    background-color: #004050;
+    padding: 10px;
+}
+.copyright{
+    text-align: center;
+    width: 50%;
+    margin: 5px auto;
+    height: 10px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    word-spacing: 2px;
+    color: #ffffff;
+}
+@media (max-width:768px) {
+    .navbar-nav li{
+        float: left;
+    }
+    .navigation{
+        margin-top: -40px;
+        position: inherit;
+        height: 15vh;
+        display: block;
+    }
+    .navbar-nav {
+        /* position: absolute; */
+        padding: 0;
+        border: 1px solid #008081;
+        margin: 0;
+    }
+    .navigation ul li a:hover{
+        color: white;
+        background-color: #008081;
+        transition: all 100ms ease;
+    } 
+}
+@media (max-width:1000px) {
+    .navbar-nav li{
+        float: left;
+    }
+    .navigation{
+        margin-top: -40px;
+        position: inherit;
+        height: 15vh;
+        display: block;
+    }
+    .navbar-nav {
+        /* position: absolute; */
+        padding: 0;
+        border: 1px solid #008081;
+        margin: 0;
+    }
+    .navigation ul li a:hover{
+        color: white;
+        background-color: #008081;
+        transition: all 100ms ease;
+    } 
+}
+
+/* 
+=======================================|
+=======================================|
+==========SERVICES PAGE STYLING========|
+=======================================|
+=======================================|
+*/
+
+#services-page-main{
+    background-color: #F2F5F9;
+}
+#services-bg-banner{
+    width: 100%;
+    margin: auto;
+}
+#services-bg-banner img{
+    width: 100%;
+
+}
